@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+	  <OutputType>Library</OutputType>
+  </PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="protobuf-net" Version="*" />
+		<PackageReference Include="protobuf-net.Grpc" Version="*" />
+		<PackageReference Include="System.ServiceModel.Primitives" Version="*" />
+	</ItemGroup>
+</Project>

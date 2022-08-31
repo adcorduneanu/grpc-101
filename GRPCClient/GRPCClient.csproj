@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net472</TargetFramework>
+		<GenerateManifests>false</GenerateManifests>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<AppendTargetRuntimeToOutputPath>false</AppendTargetRuntimeToOutputPath>
+		<LangVersion>latest</LangVersion>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+		<DebugType>full</DebugType>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+		<DebugType>pdbonly</DebugType>
+	</PropertyGroup>
+	<ItemGroup>
+		<Reference Include="System" />
+		<Reference Include="System.Configuration" />
+		<Reference Include="System.Core" />
+		<Reference Include="System.Numerics" />
+		<Reference Include="System.Runtime.Serialization" />
+		<Reference Include="System.ServiceModel" />
+		<Reference Include="System.Xml.Linq" />
+		<Reference Include="System.Data.DataSetExtensions" />
+		<Reference Include="Microsoft.CSharp" />
+		<Reference Include="System.Data" />
+		<Reference Include="System.Net.Http" />
+		<Reference Include="System.Xml" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Grpc.Net.Client" Version="2.48.0" />
+		<PackageReference Include="protobuf-net.Grpc.Native" Version="*" />
+		<PackageReference Include="protobuf-net.Grpc" Version="*" />
+		<PackageReference Include="protobuf-net" Version="*" />
+		<PackageReference Include="Grpc.Core.Api" Version="*" />
+		<PackageReference Include="Grpc.Core" Version="*" />
+		<PackageReference Include="System.Net.Http.WinHttpHandler" Version="6.0.1" />
+	</ItemGroup>	
+	<ItemGroup>
+		<ProjectReference Include="..\GRPCContracts\GRPCContracts.csproj" />
+	</ItemGroup>	
+	<ItemGroup>
+	  <None Update="samplecert.key.txt">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="samplecert.pem.txt">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+</Project>
