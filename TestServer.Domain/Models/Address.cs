@@ -6,29 +6,18 @@
 	public class Address
 	{
 		[DataMember(Order = 1)]
-		public string Number { get; private set; }
+		public string Number { get; set; }
 
 		[DataMember(Order = 2)]
-		public string Street { get; private set; }
+		public string Street { get; set; }
 
 		[DataMember(Order = 3)]
-		public string Suburb { get; private set; }
+		public string Suburb { get; set; }
 
 		[DataMember(Order = 4)]
-		public string City { get; private set; }
+		public string City { get; set; }
 
 		[DataMember(Order = 5)]
-		public string Country { get; private set; }
-
-		public Address() { }
-
-		public Address(string number, string street, string suburb, string city, string country)
-		{
-			Number = number;
-			Street = street;
-			Suburb = suburb;
-			City = city;
-			Country = country;
-		}
+		public string Country { get; set; }
 	}
 }

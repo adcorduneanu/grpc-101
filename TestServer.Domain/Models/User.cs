@@ -16,6 +16,7 @@
 
 		[DataMember(Order = 4)]
 		public Address Address { get; set; }
+
 		public User() { }
 
 		public User(int id, string firstName, string lastName, Address address)

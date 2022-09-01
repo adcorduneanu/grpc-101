@@ -2,13 +2,18 @@
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
-		<TargetFramework>net471</TargetFramework>
+		<TargetFramework>net472</TargetFramework>
 		<LangVersion>latest</LangVersion>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Grpc.Net.Client" Version="*" />
+		<PackageReference Include="protobuf-net.Grpc.Native" Version="*" />
 		<PackageReference Include="protobuf-net.Grpc" Version="*" />
-		<PackageReference Include="System.Net.Http.WinHttpHandler" Version="6.0.1" />
+		<PackageReference Include="protobuf-net" Version="*" />
+		<PackageReference Include="Grpc.Core.Api" Version="*" />
+		<PackageReference Include="Grpc.Core" Version="*" />
+		<PackageReference Include="System.Net.Http.WinHttpHandler" Version="*" />
+		<PackageReference Include="Newtonsoft.Json" Version="*" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\TestServer.Domain\TestServer.Domain.csproj" />

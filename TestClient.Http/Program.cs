@@ -9,8 +9,9 @@
 	{
 		static async Task Main(string[] args)
 		{
-			var handler = new HttpClientHandler();
+			var handler = new WinHttpHandler();
 			handler.ClientCertificates.Add(LoadSslCertificate());
+			handler.ServerCertificateValidationCallback = (requestMessage, certificate, x509Chain, sslPolicyErrors) => true;
 			var httpClient = new HttpClient(handler);
 			Console.WriteLine(await httpClient.GetStringAsync("https://localhost:5001/WeatherForecast/GetAuthWeather"));
 
@@ -21,7 +22,7 @@
 		{
 			using var certStore = new X509Store(StoreLocation.LocalMachine);
 			certStore.Open(OpenFlags.ReadOnly);
-			var cert = certStore.Certificates.Find(X509FindType.FindBySubjectName, "client", true)[0];
+			var cert = certStore.Certificates.Find(X509FindType.FindBySubjectName, "client-http", true)[0];
 			certStore.Close();
 
 			return cert;

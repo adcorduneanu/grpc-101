@@ -37,10 +37,13 @@
 
 			app.UseEndpoints(
 				endpoints =>
-				{
-					endpoints.MapControllers();
-					endpoints.MapGrpcService<GreeterService>();
-				}
+                {
+					//	endpoints.MapControllers().RequireAuthorization(); 
+					//	endpoints.MapGrpcService<GreeterService>().RequireAuthorization(); 
+					//	endpoints.MapGrpcService<UserService>().RequireAuthorization();
+					endpoints.MapAuthorizedGrpcService();
+					endpoints.MapAuthorizedControllers();
+                }
 			);
 		}
 	}
