@@ -3,19 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GRPCClient", "GRPCClient\GRPCClient.csproj", "{9A280D32-907A-46CF-8F9C-D603974350FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestServer.Domain", "TestServer.Domain\TestServer.Domain.csproj", "{6F9299A7-E083-425D-BB7D-74709CC3CF64}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GRPCServer", "GRPCServer\GRPCServer.csproj", "{B6DB0737-5C67-470B-9C00-C8244BE7B1FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestServer.Core", "TestServer.Core\TestServer.Core.csproj", "{D3D59C9C-E678-4296-881D-9E8218A48412}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GRPCContracts", "GRPCContracts\GRPCContracts.csproj", "{6F9299A7-E083-425D-BB7D-74709CC3CF64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestServer.Core.App", "TestServer.Core.App\TestServer.Core.App.csproj", "{7E3753A0-3BF3-4EDE-BA6A-E2EC0E75330A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GRPCCore", "GRPCCore\GRPCCore.csproj", "{D3D59C9C-E678-4296-881D-9E8218A48412}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestServer", "TestServer\TestServer.csproj", "{E0769BBD-E096-424D-888E-29AD6B592271}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GRPCCore.App", "GRPCCore.App\GRPCCore.App.csproj", "{7E3753A0-3BF3-4EDE-BA6A-E2EC0E75330A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestServer", "TestServer\TestServer.csproj", "{E0769BBD-E096-424D-888E-29AD6B592271}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestClient", "TestClient\TestClient.csproj", "{DDB9F479-9E04-46DE-B866-7ABFE7D239CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestClient.Http", "TestClient.Http\TestClient.Http.csproj", "{DDB9F479-9E04-46DE-B866-7ABFE7D239CB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D33FDAEE-D91F-45FC-BF67-78A4FF98185B}"
 	ProjectSection(SolutionItems) = preProject
@@ -23,20 +19,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Assets\GenerateCA.ps1 = Assets\GenerateCA.ps1
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestClient.Grpc", "TestClient.Grpc\TestClient.Grpc.csproj", "{D10E0361-1EF6-47AE-BBDB-1CF9D693028F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9A280D32-907A-46CF-8F9C-D603974350FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9A280D32-907A-46CF-8F9C-D603974350FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9A280D32-907A-46CF-8F9C-D603974350FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9A280D32-907A-46CF-8F9C-D603974350FB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B6DB0737-5C67-470B-9C00-C8244BE7B1FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B6DB0737-5C67-470B-9C00-C8244BE7B1FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B6DB0737-5C67-470B-9C00-C8244BE7B1FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B6DB0737-5C67-470B-9C00-C8244BE7B1FC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6F9299A7-E083-425D-BB7D-74709CC3CF64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6F9299A7-E083-425D-BB7D-74709CC3CF64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F9299A7-E083-425D-BB7D-74709CC3CF64}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -57,11 +47,15 @@ Global
 		{DDB9F479-9E04-46DE-B866-7ABFE7D239CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDB9F479-9E04-46DE-B866-7ABFE7D239CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDB9F479-9E04-46DE-B866-7ABFE7D239CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D10E0361-1EF6-47AE-BBDB-1CF9D693028F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D10E0361-1EF6-47AE-BBDB-1CF9D693028F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D10E0361-1EF6-47AE-BBDB-1CF9D693028F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D10E0361-1EF6-47AE-BBDB-1CF9D693028F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {64BB03B6-D7A3-4FE3-BD7F-4F643276A2F3}
+		SolutionGuid = {A9654595-5DBC-46E7-8C35-D7218590C1B5}
 	EndGlobalSection
 EndGlobal

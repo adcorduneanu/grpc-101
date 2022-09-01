@@ -1,31 +1,46 @@
 ﻿namespace TestServer
 {
-    internal class Startup
-    {
-        public void ConfigureServices(IServiceCollection services)
-        {
-            services.ConfigureAuthetication();
-            services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-            services.AddEndpointsApiExplorer();
-            services.AddSwaggerGen();
-        }
+	using Core.App.Extensions;
+	using ProtoBuf.Grpc.Server;
+	using Services;
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
-            // Configure the HTTP request pipeline.            
-            app.UseSwagger();
-            app.UseSwaggerUI();
+	internal class Startup
+	{
+		public void ConfigureServices(IServiceCollection services)
+		{
+			services.AddCertificateAuthentication();
 
-            app.UseHttpsRedirection();
-            app.UseRouting();
+			services.AddControllers();
+			services.AddHealthChecks();
+			services.AddGrpc();
+			services.AddCodeFirstGrpc(config =>
+			{
+				config.ResponseCompressionLevel = System.IO.Compression.CompressionLevel.Optimal;
+			});
 
-            app.UseAuthentication();
-            app.UseAuthorization();
+			services.AddEndpointsApiExplorer();
+			services.AddSwaggerGen();
+		}
 
-            app.UseEndpoints(
-                x => x.MapControllers()
-            );
-        }
-    }
+		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+		{
+			app.UseSwagger();
+			app.UseSwaggerUI();
+
+			app.UseHttpsRedirection();
+			app.UseRouting();
+			app.UseHealthChecks("/health");
+
+			app.UseAuthentication();
+			app.UseAuthorization();
+
+			app.UseEndpoints(
+				endpoints =>
+				{
+					endpoints.MapControllers();
+					endpoints.MapGrpcService<GreeterService>();
+				}
+			);
+		}
+	}
 }
