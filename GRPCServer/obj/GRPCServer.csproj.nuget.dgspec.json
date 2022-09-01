@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Adrian\\source\\repos\\GRPC\\GRPCServer\\GRPCServer.csproj": {}
+    "C:\\W\\Research\\grpc\\GRPCServer\\GRPCServer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Adrian\\source\\repos\\GRPC\\GRPCContracts\\GRPCContracts.csproj": {
+    "C:\\W\\Research\\grpc\\GRPCContracts\\GRPCContracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Adrian\\source\\repos\\GRPC\\GRPCContracts\\GRPCContracts.csproj",
+        "projectUniqueName": "C:\\W\\Research\\grpc\\GRPCContracts\\GRPCContracts.csproj",
         "projectName": "GRPCContracts",
-        "projectPath": "C:\\Users\\Adrian\\source\\repos\\GRPC\\GRPCContracts\\GRPCContracts.csproj",
-        "packagesPath": "C:\\Users\\Adrian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Adrian\\source\\repos\\GRPC\\GRPCContracts\\obj\\",
+        "projectPath": "C:\\W\\Research\\grpc\\GRPCContracts\\GRPCContracts.csproj",
+        "packagesPath": "C:\\Users\\acordune\\.nuget\\packages\\",
+        "outputPath": "C:\\W\\Research\\grpc\\GRPCContracts\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Adrian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\acordune\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://ap-dco202-art/api/nuget/nuget-virtual": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -77,20 +78,20 @@
         }
       }
     },
-    "C:\\Users\\Adrian\\source\\repos\\GRPC\\GRPCCore.App\\GRPCCore.App.csproj": {
+    "C:\\W\\Research\\grpc\\GRPCCore.App\\GRPCCore.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Adrian\\source\\repos\\GRPC\\GRPCCore.App\\GRPCCore.App.csproj",
+        "projectUniqueName": "C:\\W\\Research\\grpc\\GRPCCore.App\\GRPCCore.App.csproj",
         "projectName": "GRPCCore.App",
-        "projectPath": "C:\\Users\\Adrian\\source\\repos\\GRPC\\GRPCCore.App\\GRPCCore.App.csproj",
-        "packagesPath": "C:\\Users\\Adrian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Adrian\\source\\repos\\GRPC\\GRPCCore.App\\obj\\",
+        "projectPath": "C:\\W\\Research\\grpc\\GRPCCore.App\\GRPCCore.App.csproj",
+        "packagesPath": "C:\\Users\\acordune\\.nuget\\packages\\",
+        "outputPath": "C:\\W\\Research\\grpc\\GRPCCore.App\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Adrian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\acordune\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -99,14 +100,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://ap-dco202-art/api/nuget/nuget-virtual": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Adrian\\source\\repos\\GRPC\\GRPCCore\\GRPCCore.csproj": {
-                "projectPath": "C:\\Users\\Adrian\\source\\repos\\GRPC\\GRPCCore\\GRPCCore.csproj"
+              "C:\\W\\Research\\grpc\\GRPCCore\\GRPCCore.csproj": {
+                "projectPath": "C:\\W\\Research\\grpc\\GRPCCore\\GRPCCore.csproj"
               }
             }
           }
@@ -149,20 +151,20 @@
         }
       }
     },
-    "C:\\Users\\Adrian\\source\\repos\\GRPC\\GRPCCore\\GRPCCore.csproj": {
+    "C:\\W\\Research\\grpc\\GRPCCore\\GRPCCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Adrian\\source\\repos\\GRPC\\GRPCCore\\GRPCCore.csproj",
+        "projectUniqueName": "C:\\W\\Research\\grpc\\GRPCCore\\GRPCCore.csproj",
         "projectName": "GRPCCore",
-        "projectPath": "C:\\Users\\Adrian\\source\\repos\\GRPC\\GRPCCore\\GRPCCore.csproj",
-        "packagesPath": "C:\\Users\\Adrian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Adrian\\source\\repos\\GRPC\\GRPCCore\\obj\\",
+        "projectPath": "C:\\W\\Research\\grpc\\GRPCCore\\GRPCCore.csproj",
+        "packagesPath": "C:\\Users\\acordune\\.nuget\\packages\\",
+        "outputPath": "C:\\W\\Research\\grpc\\GRPCCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Adrian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\acordune\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -171,6 +173,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://ap-dco202-art/api/nuget/nuget-virtual": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -210,20 +213,20 @@
         }
       }
     },
-    "C:\\Users\\Adrian\\source\\repos\\GRPC\\GRPCServer\\GRPCServer.csproj": {
+    "C:\\W\\Research\\grpc\\GRPCServer\\GRPCServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Adrian\\source\\repos\\GRPC\\GRPCServer\\GRPCServer.csproj",
+        "projectUniqueName": "C:\\W\\Research\\grpc\\GRPCServer\\GRPCServer.csproj",
         "projectName": "GRPCServer",
-        "projectPath": "C:\\Users\\Adrian\\source\\repos\\GRPC\\GRPCServer\\GRPCServer.csproj",
-        "packagesPath": "C:\\Users\\Adrian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Adrian\\source\\repos\\GRPC\\GRPCServer\\obj\\",
+        "projectPath": "C:\\W\\Research\\grpc\\GRPCServer\\GRPCServer.csproj",
+        "packagesPath": "C:\\Users\\acordune\\.nuget\\packages\\",
+        "outputPath": "C:\\W\\Research\\grpc\\GRPCServer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Adrian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\acordune\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -232,20 +235,21 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://ap-dco202-art/api/nuget/nuget-virtual": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Adrian\\source\\repos\\GRPC\\GRPCContracts\\GRPCContracts.csproj": {
-                "projectPath": "C:\\Users\\Adrian\\source\\repos\\GRPC\\GRPCContracts\\GRPCContracts.csproj"
+              "C:\\W\\Research\\grpc\\GRPCContracts\\GRPCContracts.csproj": {
+                "projectPath": "C:\\W\\Research\\grpc\\GRPCContracts\\GRPCContracts.csproj"
               },
-              "C:\\Users\\Adrian\\source\\repos\\GRPC\\GRPCCore.App\\GRPCCore.App.csproj": {
-                "projectPath": "C:\\Users\\Adrian\\source\\repos\\GRPC\\GRPCCore.App\\GRPCCore.App.csproj"
+              "C:\\W\\Research\\grpc\\GRPCCore.App\\GRPCCore.App.csproj": {
+                "projectPath": "C:\\W\\Research\\grpc\\GRPCCore.App\\GRPCCore.App.csproj"
               },
-              "C:\\Users\\Adrian\\source\\repos\\GRPC\\GRPCCore\\GRPCCore.csproj": {
-                "projectPath": "C:\\Users\\Adrian\\source\\repos\\GRPC\\GRPCCore\\GRPCCore.csproj"
+              "C:\\W\\Research\\grpc\\GRPCCore\\GRPCCore.csproj": {
+                "projectPath": "C:\\W\\Research\\grpc\\GRPCCore\\GRPCCore.csproj"
               }
             }
           }
