@@ -27,6 +27,7 @@
 			app.UseSwagger();
 			app.UseSwaggerUI();
 
+			app.UseHsts();
 			app.UseHttpsRedirection();
 			app.UseRouting();
 			app.UseHealthChecks("/health");

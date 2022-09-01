@@ -22,7 +22,7 @@ public static class WebHostBuilderRunner
 							options.ConfigureEndpointDefaults(
 								configureOptions =>
 								{
-									configureOptions.Protocols = HttpProtocols.Http1AndHttp2AndHttp3;
+									configureOptions.Protocols = HttpProtocols.Http2;
 								}
 							);
 
