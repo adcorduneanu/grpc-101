@@ -1,26 +1,41 @@
-﻿namespace TestServer.Core.App
-{
-	using Microsoft.AspNetCore.Hosting;
-	using Microsoft.AspNetCore.Server.Kestrel.Https;
-	using Microsoft.Extensions.Hosting;
+﻿namespace TestServer.Core.App;
 
-	public static class WebHostBuilderRunner
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
+using Microsoft.AspNetCore.Server.Kestrel.Https;
+using Microsoft.Extensions.Hosting;
+
+public static class WebHostBuilderRunner
+{
+	public static IHost CreateMutualTlsWebHostBuilder<TStartup>(
+		string[] args
+	) where TStartup : class
 	{
-		public static IHost CreateMutualTlsWebHostBuilder<TStartup>(string[] args) where TStartup : class
-		{
-			return Host.CreateDefaultBuilder(args)
-				.ConfigureWebHostDefaults(webBuilder =>
+		return Host.CreateDefaultBuilder(args)
+			.ConfigureWebHostDefaults(
+				webBuilder =>
 				{
 					webBuilder.UseStartup<TStartup>();
-					webBuilder.ConfigureKestrel(options =>
-					{
-						options.ConfigureHttpsDefaults(o =>
+					webBuilder.ConfigureKestrel(
+						options =>
 						{
-							o.ClientCertificateMode = ClientCertificateMode.RequireCertificate;
-						});
-					});
-				})
-				.Build();
-		}
+							options.ConfigureEndpointDefaults(
+								configureOptions =>
+								{
+									configureOptions.Protocols = HttpProtocols.Http1AndHttp2AndHttp3;
+								}
+							);
+
+							options.ConfigureHttpsDefaults(
+								configureOptions =>
+								{
+									configureOptions.ClientCertificateMode = ClientCertificateMode.RequireCertificate;
+								}
+							);
+						}
+					);
+				}
+			)
+			.Build();
 	}
 }
