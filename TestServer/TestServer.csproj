@@ -9,10 +9,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="AutoFixture" Version="4.17.0" />
+		<PackageReference Include="AutoFixture" Version="*" />
 		<PackageReference Include="Grpc" Version="*" />
 		<PackageReference Include="Microsoft.AspNetCore" Version="*" />
-
+		<PackageReference Include="protobuf-net.Grpc.AspNetCore.Reflection" Version="*"/>
 		<PackageReference Include="protobuf-net" Version="*" />
 		<PackageReference Include="protobuf-net.Grpc.AspNetCore" Version="*" />
 		<PackageReference Include="Microsoft.AspNetCore.Authentication.Certificate" Version="*" />

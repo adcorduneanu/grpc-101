@@ -25,6 +25,7 @@ public static class WebHostBuilderRunner
 		LoadAllAssemblies();
 
 		return Host.CreateDefaultBuilder(args)
+			.UseWindowsService()
 			.ConfigureWebHostDefaults(
 				webBuilder =>
 				{
