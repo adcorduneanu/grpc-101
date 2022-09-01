@@ -1,6 +1,7 @@
 ﻿namespace TestServer.Services
 {
 	using Domain;
+	using TestServer.Domain.Services;
 
 	public class GreeterService : IGreeterService
 	{

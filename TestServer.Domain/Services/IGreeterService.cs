@@ -1,4 +1,4 @@
-﻿namespace TestServer.Domain
+﻿namespace TestServer.Domain.Services
 {
 	using System.ServiceModel;
 
