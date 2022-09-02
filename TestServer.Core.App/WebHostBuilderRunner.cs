@@ -13,7 +13,7 @@ using Microsoft.Extensions.Hosting;
 public static class WebHostBuilderRunner
 {
 	public static void LoadAllAssemblies()
-    {
+	{
 		Directory.GetFiles(AppContext.BaseDirectory, "*.dll", SearchOption.TopDirectoryOnly)
 			.Select(AssemblyLoadContext.Default.LoadFromAssemblyPath);
 	}
@@ -33,12 +33,12 @@ public static class WebHostBuilderRunner
 					webBuilder.ConfigureKestrel(
 						options =>
 						{
-							options.ConfigureEndpointDefaults(
-								configureOptions =>
-								{
-									configureOptions.Protocols = HttpProtocols.Http2;
-								}
-							);
+							//options.ConfigureEndpointDefaults(
+							//	configureOptions =>
+							//	{
+							//		configureOptions.Protocols = HttpProtocols.Http1AndHttp2AndHttp3;
+							//	}
+							//);
 
 							options.ConfigureHttpsDefaults(
 								configureOptions =>

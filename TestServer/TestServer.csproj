@@ -15,6 +15,7 @@
 		<PackageReference Include="protobuf-net.Grpc.AspNetCore.Reflection" Version="*"/>
 		<PackageReference Include="protobuf-net" Version="*" />
 		<PackageReference Include="protobuf-net.Grpc.AspNetCore" Version="*" />
+		<PackageReference Include="Grpc.AspNetCore.Web" Version="*" />
 		<PackageReference Include="Microsoft.AspNetCore.Authentication.Certificate" Version="*" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="*" />
 	</ItemGroup>

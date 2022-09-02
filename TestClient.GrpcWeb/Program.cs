@@ -20,14 +20,11 @@
 	{
 		static async Task Main(string[] args)
 		{
+			var handler = new GrpcWebHandler(GrpcWebMode.GrpcWebText, new HttpClientHandler { ClientCertificates = { LoadSslCertificate("client-grpc") } });
 			var channel = GrpcChannel.ForAddress("https://localhost:5001", new GrpcChannelOptions
 			{
-				HttpHandler = new HttpClientHandler()
-				{
-					ClientCertificates = { LoadSslCertificate("client-grpc") }
-				}
+				HttpClient = new HttpClient(handler)
 			});
-			//var channel = new Channel("localhost:5001", ChannelCredentials.SecureSsl);
 
 			var greeterService = channel.CreateGrpcService<IGreeterService>();
 
